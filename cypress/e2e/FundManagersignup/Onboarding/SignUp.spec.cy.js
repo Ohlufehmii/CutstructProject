@@ -27,7 +27,7 @@ describe('LandingPage Ui', () => {
     cy.get('.css-wlnxh6  span').click();
     cy.get('.chakra-heading.css-1kplevb').should('be.visible').should('have.text', 'Sign Up'),
       cy.get('.chakra-text.css-1v9shy8').should('be.visible').should('have.text', 'Get access to state of the art construction support for your projects.');
-
+      cy.get('.css-hv4pdn [class="css-1c3p398"]:nth-of-type(1) p').should('be.visible').click();
     cy.get('.chakra-input.css-3tqrgx').type(faker.company.name());
     cy.get('input[placeholder="Full Name"]').type(faker.person.fullName());
 
