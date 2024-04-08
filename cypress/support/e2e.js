@@ -17,6 +17,7 @@
 import './commands'
 import 'cypress-mailslurp'
 import './Custom-commands/Signup.actions.cy'
+import './Custom-commands/signin.actions.cy'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

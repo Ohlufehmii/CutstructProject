@@ -1,0 +1,7 @@
+{
+    "EmailField": "[placeholder='yourname@example.com']",
+    "PasswordField": "[type='password']",
+    "SignInButton": "[type='submit']",
+
+    "ResetPasswordBtn": "[href='\/auth\/forgot-password'] span"
+  }
