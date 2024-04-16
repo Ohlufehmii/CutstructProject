@@ -1,0 +1,15 @@
+{
+    "CreateProjectButton": "[class='chakra-button css-2nb1hs']",
+    "ProjectTitle": "[placeholder='Add Project Title']",
+    "ProjectDescription": "[placeholder='Add Project Description...']",
+    "StartDate": "[placeholder='Start date']",
+    "PickstartDate": ".react-datepicker__day",
+    "EndDate": "[placeholder='End date']",
+    "PickEndDate": "div:nth-of-type(4) > div:nth-of-type(5)",
+    "ProjectLocationField": ".select__value-container",
+    "State": ".select__option.css-10wo9uf-option",
+    "CreateProject": "[type='submit']",
+    "ProjectSuccessText": ".chakra-text.css-a1i875",
+    "Xbutton": ".chakra-icon.css-onkibi"
+  }
+  

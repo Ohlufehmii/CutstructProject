@@ -4,8 +4,12 @@
 
 describe('LandingPage Ui', () => {
 
+beforeEach(() => {
+  cy.visit('/');
+  
+})
+
   it('SignUpFundManager', () => {
-   cy.ClickSignupButton();
    cy.SelectFundManager();
    cy.FillSignUpForm();
    cy.FillEmail();
@@ -20,7 +24,6 @@ describe('LandingPage Ui', () => {
   })
 
   it('SignUpBuilder', () => {
-    cy.ClickSignupButton();
     cy.SelectBuilder();
     cy.FillSignUpForm();
     cy.FillEmail();
@@ -35,7 +38,6 @@ describe('LandingPage Ui', () => {
    })
 
    it('SignUpSupplier', () => {
-    cy.ClickSignupButton();
     cy.SelectSupplier();
     cy.FillSignUpForm();
     cy.FillEmail();

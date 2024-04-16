@@ -2,6 +2,10 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
+    chromeWebSecurity: false,
+    experimentalInteractiveRunEvents: true,
+    experimentalMemoryManagement: true,
+    experimentalRunAllSpecs: true,
     watchForFileChanges: false,
     defaultCommandTimeout:20000,
     baseUrl:"https://staging-fe-v2.cutstruct.com/",
