@@ -1,4 +1,5 @@
 {
+    "FirstSignInBtn": "[href] span",
     "EmailField": "[placeholder='yourname@example.com']",
     "PasswordField": "[type='password']",
     "SignInButton": "[type='submit']",

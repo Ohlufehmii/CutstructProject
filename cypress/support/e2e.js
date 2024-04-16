@@ -18,6 +18,15 @@ import './commands'
 import 'cypress-mailslurp'
 import './Custom-commands/Signup.actions.cy'
 import './Custom-commands/signin.actions.cy'
+import './Custom-commands/Dashboard.actions.cy'
+import './Custom-commands/CreateProjects.actions.cy'
+before( () => {
+    cy.visit('/');
+    cy.on('uncaught:exception', () => {
+        return false
+    })
+   
+})
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

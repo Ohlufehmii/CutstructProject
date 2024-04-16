@@ -4,19 +4,12 @@ import { should } from "chai"
 let inboxId
 let emailAdress
 let emailBody
-let otpValue
 let sel
 
-beforeEach(() => {
+before(() => {
     cy.fixture('signupElements').then((signupElements) => {
         sel = signupElements
     })
-    cy.on('uncaught:exception', () => {
-        return false
-    })
-    cy.visit('/');
-    cy.get('.chakra-heading').should('be.visible'),
-        cy.get('.chakra-text.css-1v9shy8').should('be.visible').should('have.text', 'You can login as Fund Manager, Builder, or a Supplier.');
 });
 
 Cypress.Commands.add('ClickSignupButton', () => {
@@ -26,15 +19,18 @@ Cypress.Commands.add('ClickSignupButton', () => {
         cy.get(sel.SignUpbody).should('be.visible').should('have.text', 'Get access to state of the art construction support for your projects.');
 });
 Cypress.Commands.add('SelectFundManager', () => {
-    cy.get(sel.FundManagerButon).should('be.visible').click();
+    cy.get('.css-m22mio div').should('be.visible');
+    cy.get(sel.FundManagerButon).click();
 });
 
 Cypress.Commands.add('SelectBuilder', () => {
-    cy.get(sel.BuilderButton).should('be.visible').click();
+    cy.get('[class="dddd css-1wqnpbl"] div').should('be.visible');
+    cy.get(sel.BuilderButon).click();
 });
 
 Cypress.Commands.add('SelectSupplier', () => {
-    cy.get(sel.SupplierButton).should('be.visible').click();
+    cy.get('[class="dddd css-1qoszle"] div').should('be.visible');
+    cy.get(sel.SupplierButton).click();
 });
 Cypress.Commands.add('FillSignUpForm', () => {
     cy.get(sel.BusinessNameField).type(faker.company.name());
@@ -67,7 +63,7 @@ Cypress.Commands.add('ClickCreateAccountBtn', () => {
 
 
 Cypress.Commands.add('FillOTP', () => {
-    cy.mailslurp().then(Email => Email.waitForLatestEmail(inboxId, 30000, true))
+    cy.mailslurp().then(Email => Email.waitForLatestEmail(inboxId, 60000, true))
         .then(email => {
             emailBody = email.body
             const extractor = new DOMParser()

@@ -1,0 +1,14 @@
+{
+    "WelcomeText": "[class='css-13wq6gh']",
+    "SubHeaderText": "[class='chakra-text css-1kuy7z7']",
+    "DahboardDescriptionText": ".css-bix95e",
+    "BudgetCard":"[class='chakra-stack css-1135rnf'] [class='css-1adu4xz']",
+    "SpendCard": "[class='chakra-stack css-1rb42pk'] [class='css-1adu4xz']",
+    "VarianceCard": ".css-seqbhk [class='css-1adu4xz']",
+    "AccountCard": ".css-dhh0ty",
+    "ActiveProjectCounter": "[class='chakra-stack css-1761m3b'] [class='css-70qvj9']:nth-of-type(1)",
+    "PendingProjectCounter": ".chakra-stack.css-1761m3b > div:nth-of-type(2)",
+    "CompletedProjectCounter": ".chakra-stack.css-1761m3b > div:nth-of-type(3)"
+
+  }
+  

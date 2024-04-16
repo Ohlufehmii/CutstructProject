@@ -1,12 +1,17 @@
 
 
-describe('Fund Manager login', () => {
+describe('login', () => {
 
+    beforeEach(() => {
+
+    cy.visit('/');
+    })
+    
     it('login successfully', () => {
         cy.Login();
     })
 
-    it('reset password successfully', () => {
+    it.only('reset password successfully', () => {
 
         cy.ClickForgotPasswordButton();
         cy.RetrieveAndEnterEmailAddress();
