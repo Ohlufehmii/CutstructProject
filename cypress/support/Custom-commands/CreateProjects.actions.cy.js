@@ -1,6 +1,6 @@
 
 let ele
-
+let initialBalance; 
 before(() => {
     cy.fixture('CreateProjectElements').then((ProjectElement)=>{
         ele = ProjectElement
@@ -37,5 +37,39 @@ Cypress.Commands.add('ClickTheCreateAProjectBtn', () => {
 Cypress.Commands.add('VerifyProjectCreatedAndQuitModal', () => {
     cy.get(ele.ProjectSuccessText).should('be.visible').and('have.text', 'Project Created Successfully');
         cy.get(ele.Xbutton).click();
+})
+
+Cypress.Commands.add('VerifyProjectInitialBalance', () => {
+    cy.get(ele.SelectProject).click();  
+        cy.wait(5000);
+        cy.get(ele.projectBalance).invoke('text').then((text) => {
+            const cleanText = text.trim().replace('₦', '').replace(/,/g, '');
+            initialBalance = parseFloat(cleanText);
+
+        })
+})
+
+Cypress.Commands.add('FundProjectFromVaultBalance', () => {
+    cy.get(ele.FundProjectBtn).click();
+        cy.get(ele.SelectVault).click();
+        cy.get(ele.AmountField).type('2000');
+        cy.get(ele.FundButton).click();
+})
+
+Cypress.Commands.add('ValidateFundingWithToastMessage', () => {
+    cy.get(ele.ToastMessage).should('be.visible').and('contain', 'Payment successful')
+        
+        cy.wait(5000);
+})
+
+Cypress.Commands.add('ValidateFundingWithProjectWalletBalance', () => {
+    cy.get(ele.projectBalance).invoke('text').then((newText) => {
+        const newCleanText = newText.trim().replace('₦', '').replace(/,/g, '');
+        const newBalance = parseFloat(newCleanText);
+        const expectedNewBalance = initialBalance + 2000; 
+        console.log('New Balance:', newBalance); 
+        console.log('Expected New Balance:', expectedNewBalance); 
+        expect(newBalance).to.eq(expectedNewBalance);
+      });
 })
 

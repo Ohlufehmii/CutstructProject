@@ -2,8 +2,8 @@
 
 describe('Create a project', () =>{
 
-    
-    it('creates a project successfully', () => {
+   
+    it('creates and fund a project successfully', () => {
         cy.login();
         cy.ClickCreateProjectButton();
         cy.FillProjectDetails();
@@ -11,8 +11,15 @@ describe('Create a project', () =>{
         cy.VerifyProjectCreatedAndQuitModal();
 
 
-})
+        // fund project
+        cy.VerifyProjectInitialBalance();
+        cy.FundProjectFromVaultBalance();
+        cy.ValidateFundingWithToastMessage();
+        cy.ValidateFundingWithProjectWalletBalance();
+        });
+    })
 
 
 
-})
+
+
