@@ -10,6 +10,14 @@
     "State": ".select__option.css-10wo9uf-option",
     "CreateProject": "[type='submit']",
     "ProjectSuccessText": ".chakra-text.css-a1i875",
-    "Xbutton": ".chakra-icon.css-onkibi"
+    "Xbutton": ".chakra-icon.css-onkibi",
+    "SelectProject": "tr:nth-of-type(2) > td:nth-of-type(5)",
+    "projectBalance": "div:nth-of-type(1) > .css-1gs6dpe",
+    "FundProjectBtn": "[class='css-1wc8khx']",
+    "SelectVault": ".css-okr53r",
+    "AmountField": "[placeholder='1,000,000,000']",
+    "FundButton": "[class='chakra-button css-1ketg5j']",
+    "ToastMessage": ".chakra-alert.css-1af42be"
+
   }
   

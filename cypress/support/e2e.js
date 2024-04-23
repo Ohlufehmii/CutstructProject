@@ -20,6 +20,7 @@ import './Custom-commands/Signup.actions.cy'
 import './Custom-commands/signin.actions.cy'
 import './Custom-commands/Dashboard.actions.cy'
 import './Custom-commands/CreateProjects.actions.cy'
+import './Custom-commands/EndtoEndFlow.actions.cy'
 before( () => {
     cy.visit('/');
     cy.on('uncaught:exception', () => {
