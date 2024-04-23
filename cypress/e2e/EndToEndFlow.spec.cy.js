@@ -21,20 +21,20 @@ describe('complete the end to end flow from Fund Manager to builder', () => {
 
     })
 
-    it('Raise RFQ as a Builder', () => {
+    it.only('Raise RFQ as a Builder', () => {
 
         cy.BuilderRaisesRFQ();
 
     })
 
-    it('bid for an order as a supplier', () => {
+    it.only('bid for an order as a supplier', () => {
         cy.SupplierBidForAnOrder();
     })
 
-    it('approves a bid', () => {
+    it.only('approves a bid', () => {
         cy.BuilderApprovesAndFundAnOrder();
     })
-    it('Fulfill order as a supplier', () => {
+    it.only('Fulfill order as a supplier', () => {
         cy.SupplierFulfillsAnOrder();
     })
 

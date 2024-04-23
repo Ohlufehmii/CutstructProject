@@ -21,6 +21,20 @@ module.exports = defineConfig({
    },
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      return {
+        ...config,
+        browsers: [
+          ...config.browsers,
+          {
+            name: 'opera One',
+            family: 'chromium',
+            displayName: 'Opera',
+            version: '109.0.5097.59', 
+            path: "C:\\Users\\olufemi.habib\\AppData\\Local\\Programs\\Opera\\opera.exe", 
+            majorVersion: '109.0' 
+          }
+        ]
+      };
     },
   },
 });
