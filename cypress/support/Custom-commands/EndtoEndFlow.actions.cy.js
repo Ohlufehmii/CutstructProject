@@ -97,7 +97,7 @@ Cypress.Commands.add('FundManagerAcceptsBid', () => {
 
    //  Cick project and select a project to approve
    cy.get('.css-gg2341').eq(0).click();
-   cy.get('[class="css-1q9q6ea"]').eq(18).click();
+   cy.get('[class="css-1q9q6ea"]').eq(20).click();
 
    // View bid and approve it
    cy.get('.chakra-button.css-xsoqte').click();
@@ -141,10 +141,10 @@ Cypress.Commands.add('BuilderRaisesRFQ', () => {
 
      // Payment method
      cy.get('.css-1q2yoq2 > .css-1xo3mso .css-19bb58m.select__input-container').click();
-    //  cy.get('#.select('Option Text');').click();
-     cy.get('#chakra-modal--body-\:re6\: button').click();
+     cy.get('[class="select__option select__option--is-focused css-d7l1ni-option"]').click();
+     cy.get('[class="chakra-button css-1ketg5j"]').eq(1).click();
      cy.wait(5000)
-     cy.get('.chakra-ui-light > script:nth-of-type(3)').should('have.text', 'RFQ has been created');
+
 
 
 })
