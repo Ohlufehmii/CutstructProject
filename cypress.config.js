@@ -26,15 +26,16 @@ module.exports = defineConfig({
         browsers: [
           ...config.browsers,
           {
-            name: 'opera One',
+            name: 'Chromium',
             family: 'chromium',
-            displayName: 'Opera',
-            version: '109.0.5097.59', 
-            path: "C:\\Users\\olufemi.habib\\AppData\\Local\\Programs\\Opera\\opera.exe", 
+            displayName: 'Chromium',
+            version: '126.0.6436.0', 
+            path: "C:\\Users\\olufemi.habib\\AppData\\Local\\Chromium\\Application\\chrome.exe", 
             majorVersion: '109.0' 
           }
         ]
       };
+      
     },
   },
 });
